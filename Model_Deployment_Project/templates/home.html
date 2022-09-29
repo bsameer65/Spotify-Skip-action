@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Spotify</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <img src="{% static 'images/spotify-hex-colors-gradient-logo.png' %}" alt="#">
+      </div>
+      <form action="{% url 'results' %}">
+        {% csrf_token %}
+        <div class="card-details">
+          <div class="card-box">
+            <span class="details">Session Length</span>
+            <input type="number" required name="Col2" placeholder="Enter Length">
+          </div>
+          <div class="card-box">
+            <span class="details">Session Position</span>
+            <input type="number" required name="Col3" placeholder="Enter position">
+          </div>
+          <div class="card-box">
+            <span class="details">context type</span>
+            <input type="text" required name="Col4" placeholder="Enter type">
+          </div>
+          <div class="card-box">
+            <span class="details">context switch</span>
+            <input type="number" required name="Col5" placeholder="0 or 1">
+          </div>
+          <div class="card-box">
+            <span class="details">No pause before play</span>
+            <input type="number" required name="Col6" placeholder="0 or 1">
+          </div>
+          <div class="card-box">
+            <span class="details">Seek Forward</span>
+            <input type="number" required name="Col7" placeholder="Seek Forward">
+          </div>
+          <div class="card-box">
+            <span class="details">Seek backward</span>
+            <input type="number" required name="Col8" placeholder="Seek backward">
+          </div>
+          <div class="card-box">
+            <span class="details">Hour of day</span>
+            <input type="number" required name="Col9" placeholder="Hours">
+          </div>
+          <div class="card-box">
+            <span class="details">Premium</span>
+            <input type="number" required name="Col10" placeholder="0 or 1">
+          </div>
+          <div class="card-box">
+            <span class="details">Start Reason</span>
+            <input type="text" required name="Col11" placeholder="Start reason">
+          </div>
+          <div class="card-box">
+            <span class="details">End Reason</span>
+            <input type="text" required name="Col12" placeholder="End reason">
+          </div>
+          <div class="card-box">
+            <span class="details">Date</span>
+            <input type="text" required name="Col13" placeholder="yyyy/mm/dd">
+          </div>
+
+        </div>
+        <div class="button">
+          <input type="submit" name="" value="submit">
+        </div>
+    </form>
+    </div>
+
+
+  </body>
+</html>

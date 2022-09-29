@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title></title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="header">
+        <h2>Prediction </h2>
+      </div>
+      <p>Model predict: {{res}}</p>
+      <div class="line"></div>
+      <a href="{% url 'home' %}" class="close">Back to homepage</a>
+
+
+
+      </div>
+
+    </div>
+
+
+
+  </body>
+</html>
